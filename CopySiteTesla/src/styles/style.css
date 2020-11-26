@@ -1,0 +1,204 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 2000;
+    padding: 0.5rem 1rem;
+    animation: fade 1s;
+}
+
+body::-webkit-scrollbar {
+    background: #333;
+    width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+    width: 2px;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.logo {
+    width: 25%;
+}
+.logo h3 {
+    /* Espaçamento das letras */
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+.models {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.models a {
+    font-weight: 600;
+    color: #333;
+}
+.models a + a, .information a + a {
+    margin-left: 0.8rem;
+}
+
+.information {
+    margin-right: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 25%;
+}
+
+.information a  {
+    color: #111;
+    font-weight: 600;
+
+}
+
+
+.information .burger {
+    width: 25px;
+    height: 25px;
+    margin-left: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    cursor: pointer;
+    position: relative;  
+}
+
+
+.burger div {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    margin: 0.8rem;   
+    transition: all 0.5s;
+    z-index: 2000;
+}
+
+.burger.change .burger1{
+
+    transform: rotate(-50deg);
+}
+.burger.change .burger3 {
+    transform: translate(0px, 8px) rotate(50deg);
+}
+
+.burger div + div {
+    margin-top: 0.2rem;
+}
+.burger1 {
+    top: 0;
+}
+.burger2 {
+    top: 5px;
+}
+.burger3 {
+    top: 1px;
+}
+/* MAIN */
+
+main {
+    position: relative;
+}
+
+main .informationPrice{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 20%;
+    align-items: center;
+    pointer-events: none;
+    
+}
+
+.informationPrice h1 {
+    color: #393c41;
+    margin-bottom: 0.4rem;
+
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+.informationPrice p {
+    color: #55575a;
+    letter-spacing: 0.5px;
+}
+
+.informationPrice.animacao {
+    animation: fade 1s;
+}
+
+
+.buttons {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content:center;
+    padding: 5rem 0;
+}
+.options button + button {
+    margin-left: 6rem; 
+}
+.options button {
+    width: 17rem;
+    height: 2.6rem;
+    border-radius: 3rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+.options button:first-child{
+    color: #f7f7f7;
+    background: rgba(0, 0, 0, 0.65);
+}
+.options button:last-child{
+    background: rgba(255, 255, 255, 0.479)
+}
+
+.new-information  {
+    height: 100vh;
+    background: #fff;
+    
+    width: 25vw;
+    position: absolute;
+    transform: translateX(1000px); 
+    transition: all 0.5s ease-in-out;
+    top: 0;
+}
+.new-information ul {
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4.6rem 0;
+}
+.new-information ul li {
+    list-style: none;
+    width: 26rem;
+    padding: 1.7rem;
+    line-height: 2rem;
+    font-weight: 600;
+    border-bottom: 1px  solid #555;
+    cursor: pointer;
+    
+}
+ul li + li {
+    padding-top: 4.5rem;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
